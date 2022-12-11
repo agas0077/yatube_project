@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 {% block stylesheet %}
     {% static 'css/bootstrap.min.css' %}
@@ -17,9 +17,9 @@
                     <p>{{ post.text }}</p>
                     <a href={% url 'posts:group_list' post.group.slug %}>все записи группы {{ post.group.title }}</a>
                 </article>
-                {% if not forloop.last %}<hr>{% endif %}
+                {% if not forloop.last %}</hr>{% endif %}
             {% endfor %}
-            <hr>
+            </hr>
             <!-- под последним постом нет линии -->
         </div>
     </main>
