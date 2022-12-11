@@ -11,7 +11,7 @@
       {% for post in posts %}
         <article>
           <ul>
-            <li>Автор: {{ post.author }}</li>
+            <li>Автор: {{ post.author.first_name }} {{ post.author.last_name }}</li>
             <li>Дата публикации: {{ post.pub_date|date:"d E Y" }}</li>
           </ul>
           <p>{{ post.text }}</p>
